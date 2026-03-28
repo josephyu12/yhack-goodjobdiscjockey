@@ -1,0 +1,13 @@
+{
+  "name": "gdj-generator",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "generate": "node generate.js",
+    "fallback": "node generate-fallback.js"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.3.0",
+    "openai": "^4.0.0"
+  }
+}

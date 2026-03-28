@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Good Job Disc Jockey",
+  "version": "0.1.0",
+  "description": "Secretly educational Instagram Reels — 1 in 5 reels replaced with an AI explainer about a recent research paper.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.instagram.com/*"],
+  "content_scripts": [{
+    "matches": ["https://www.instagram.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
+  "action": {
+    "popup": "popup.html",
+    "default_title": "Good Job Disc Jockey"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [{
+    "resources": ["videos/*"],
+    "matches": ["https://www.instagram.com/*"]
+  }]
+}
